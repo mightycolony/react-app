@@ -1,0 +1,17 @@
+# for super user permission to run docker
+sudo :required
+services: 
+     -docker:
+
+
+#install before packages before run test or to production                 
+before_install:
+     - docker build -t travis/image -f Dockerfile.dev .
+#travis/image image/docker going to run only for the travis process
+
+#for running test 
+#travis-ci will watch this script output and if something fails and provide status code 1 or something the build/test is broken/failed
+script:
+     -docker run -e  travis/image npm run test -- --coverage
+
+#-- --coverage inorder to remove the hang and end of the test
