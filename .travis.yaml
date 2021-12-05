@@ -1,6 +1,6 @@
 # for super user permission to run docker
 sudo :required
-language: generic
+language: java
 services: 
      -docker:
 
