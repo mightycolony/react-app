@@ -19,18 +19,18 @@ script:
 #-- --coverage inorder to remove the hang and end of the test
 
 #deploying state
-deploy
+deploy:
 #provider aws(elasticbeanstalk im using),digitalocean..
    provider: elasticbeanstalk
    region: "ap-south-1"
-   app:  "docker-react"
+   app: "docker-react"
    env: "Dockerreact-env"
    bucket_name: "elasticbeanstalk-ap-south-1-574938868010"
    bucket_path: "docker-react"
    on: 
      branch: main
    access_key_id: $AWS_ACCESS_KEY 
-   secret_access_key: "$AWS_SECRET_KEY"
+   secret_access_key: $AWS_SECRET_KEY
 #application name created in elasticbeanstalk
 #env - which we given while created on elasticbeanstalk app creation
 #bucket_name: which is automatically created on elasticbeanstalk app creation
