@@ -12,6 +12,6 @@ before_install:
 #for running test 
 #travis-ci will watch this script output and if something fails and provide status code 1 or something the build/test is broken/failed
 script:
-     -docker run -e  travis/image npm run test -- --coverage
+        -docker run  travis/image npm run test -- --coverage
 
 #-- --coverage inorder to remove the hang and end of the test
