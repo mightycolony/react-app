@@ -1,8 +1,6 @@
 # for super user permission to run docker
 sudo: required
 language: node_js
-  node_js:
-    - 7
 services: 
      -docker:
 
