@@ -11,7 +11,7 @@ before_install:
      - docker build -t travis/images -f Dockerfile.dev .
 #travis/image image/docker going to run only for the travis process
 
-#for running test 
+#for running test.
 #travis-ci will watch this script output and if something fails and provide status code 1 or something the build/test is broken/failed
 script:
       - docker run -e CI=true  travis/images npm run test -- --coverage
