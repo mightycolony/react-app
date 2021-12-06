@@ -8,7 +8,7 @@ services:
 
 #install before packages before run test or to production                 
 before_install:
-     - docker build -t travis/image -f Dockerfile.dev .
+     - docker build -t travis/image -f Dockerfile .
 #travis/image image/docker going to run only for the travis process
 
 #for running test 
