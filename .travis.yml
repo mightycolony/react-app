@@ -31,9 +31,9 @@ deploy:
      branch: main
    access_key_id: $AWS_ACCESS_KEY 
    secret_access_key: $AWS_SECRET_KEY
-#application name created in elasticbeanstalk
-#env - which we given while created on elasticbeanstalk app creation
-#bucket_name: which is automatically created on elasticbeanstalk app creation
-#bucket_path: the name we given docker-react will not be created untill we deploy
-#on:brach:main - refers to when we push code to main(i used)/master on that time deploy will work
-#aboce access and secert keys are generate from aws iam for that elasticbeanstalk and added in env in travis-ci and adding here
+#application name created in elasticbeanstalk.
+#env - which we given while created on elasticbeanstalk app creation.
+#bucket_name: which is automatically created on elasticbeanstalk app creation.
+#bucket_path: the name we given docker-react will not be created untill we deploy.
+#on:brach:main - refers to when we push code to main(i used)/master on that time deploy will work.
+#aboce access and secert keys are generate from aws iam for that elasticbeanstalk and added in env in travis-ci and adding here.
