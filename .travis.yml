@@ -8,13 +8,13 @@ services:
 
 #install before packages before run test or to production                 
 before_install:
-     - docker build -t travis/image -f Dockerfile .
+     - docker build -t travis/images -f Dockerfile .
 #travis/image image/docker going to run only for the travis process
 
 #for running test 
 #travis-ci will watch this script output and if something fails and provide status code 1 or something the build/test is broken/failed
 script:
-      - docker run -e CI=true  travis/image npm run test -- --coverage
+      - docker run -e CI=true  travis/images npm run test -- --coverage
 
 #-- --coverage inorder to remove the hang and end of the test
 
